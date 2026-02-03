@@ -35,7 +35,7 @@ export function Problems({ problems }: ProblemsProps) {
           title="こんなお悩みありませんか？"
           subtitle="介護施設の経営者・管理者が抱える共通の課題"
         />
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-3 sm:gap-6 max-w-4xl mx-auto">
           {problems.map((problem, i) => {
             const Icon = iconMap[problem.icon] || HelpCircle;
             return (
@@ -45,16 +45,16 @@ export function Problems({ problems }: ProblemsProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="flex gap-4 p-6 bg-white rounded-2xl shadow-sm"
+                className="flex gap-3 sm:gap-4 p-4 sm:p-6 bg-white rounded-2xl shadow-sm"
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-secondary-light flex items-center justify-center">
-                  <Icon className="w-6 h-6 text-secondary" />
+                <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-secondary-light flex items-center justify-center">
+                  <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-secondary" />
                 </div>
-                <div>
-                  <h3 className="font-bold text-foreground mb-1">
+                <div className="min-w-0">
+                  <h3 className="text-sm sm:text-base font-bold text-foreground mb-1">
                     {problem.title}
                   </h3>
-                  <p className="text-sm text-muted">{problem.description}</p>
+                  <p className="text-xs sm:text-sm text-muted">{problem.description}</p>
                 </div>
               </motion.div>
             );
