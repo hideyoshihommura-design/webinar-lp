@@ -33,7 +33,7 @@ function WebinarLP() {
       <FloatingCTA />
 
       {/* Footer */}
-      <footer className="bg-foreground text-white py-8">
+      <footer className="bg-foreground text-white py-8 pb-24 sm:pb-8">
         <div className="container-default text-center">
           <p className="text-sm font-semibold mb-2">{data.footer.company}</p>
           <p className="text-xs text-white/50 mb-4">

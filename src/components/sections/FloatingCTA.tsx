@@ -28,9 +28,9 @@ export function FloatingCTA() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-t border-border shadow-2xl"
+          className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-t border-border shadow-2xl safe-bottom"
         >
-          <div className="container-default py-3 flex items-center justify-between gap-4">
+          <div className="container-default py-2.5 sm:py-3 flex items-center justify-between gap-3 sm:gap-4">
             <div className="hidden sm:block">
               <p className="text-sm font-bold text-foreground">
                 無料オンラインセミナー
@@ -41,7 +41,7 @@ export function FloatingCTA() {
             </div>
             <button
               onClick={scrollToRegistration}
-              className="btn-primary text-sm py-3 px-6 w-full sm:w-auto"
+              className="btn-primary text-sm py-3 px-5 sm:px-6 w-full sm:w-auto"
             >
               今すぐ席を確保する
               <ArrowRight className="ml-2 w-4 h-4" />

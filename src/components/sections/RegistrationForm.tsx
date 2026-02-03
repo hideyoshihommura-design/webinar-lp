@@ -80,7 +80,7 @@ export function RegistrationForm() {
         >
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="bg-white rounded-2xl p-8 shadow-xl space-y-5"
+            className="bg-white rounded-2xl p-5 sm:p-8 shadow-xl space-y-4 sm:space-y-5"
           >
             <div>
               <label className="block text-sm font-semibold text-foreground mb-1">

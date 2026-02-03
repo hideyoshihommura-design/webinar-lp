@@ -46,20 +46,20 @@ export function WebinarContents({ contents }: WebinarContentsProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="card-hover p-6"
+                className="card-hover p-4 sm:p-6"
               >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center">
-                    <Icon className="w-7 h-7 text-white" />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="flex-shrink-0 w-11 h-11 sm:w-14 sm:h-14 rounded-xl bg-gradient-primary flex items-center justify-center">
+                    <Icon className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
                   </div>
-                  <div>
-                    <span className="text-xs font-bold text-primary mb-1 block">
+                  <div className="min-w-0">
+                    <span className="text-[10px] sm:text-xs font-bold text-primary mb-1 block">
                       POINT {i + 1}
                     </span>
-                    <h3 className="text-lg font-bold text-foreground mb-2">
+                    <h3 className="text-base sm:text-lg font-bold text-foreground mb-1 sm:mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-muted">{item.description}</p>
+                    <p className="text-xs sm:text-sm text-muted">{item.description}</p>
                   </div>
                 </div>
               </motion.div>

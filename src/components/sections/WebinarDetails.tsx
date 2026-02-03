@@ -44,13 +44,13 @@ export function WebinarDetails({ details }: WebinarDetailsProps) {
               {detailItems.map(({ key, label, icon: Icon }) => (
                 <div
                   key={key}
-                  className="flex items-center gap-4 px-6 py-4"
+                  className="flex items-start sm:items-center gap-3 sm:gap-4 px-4 sm:px-6 py-3 sm:py-4"
                 >
-                  <Icon className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-sm font-medium text-muted w-24 flex-shrink-0">
+                  <Icon className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 sm:mt-0" />
+                  <span className="text-xs sm:text-sm font-medium text-muted w-16 sm:w-24 flex-shrink-0">
                     {label}
                   </span>
-                  <span className="text-sm font-semibold text-foreground">
+                  <span className="text-xs sm:text-sm font-semibold text-foreground break-all">
                     {details[key]}
                   </span>
                 </div>
@@ -75,9 +75,9 @@ export function WebinarDetails({ details }: WebinarDetailsProps) {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.1 }}
-                  className="flex items-center gap-4 bg-white rounded-xl px-6 py-4 shadow-sm"
+                  className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 bg-white rounded-xl px-4 sm:px-6 py-3 sm:py-4 shadow-sm"
                 >
-                  <span className="text-sm font-mono text-primary font-semibold w-32 flex-shrink-0">
+                  <span className="text-xs sm:text-sm font-mono text-primary font-semibold sm:w-32 flex-shrink-0">
                     {item.time}
                   </span>
                   <span className="text-sm text-foreground">
